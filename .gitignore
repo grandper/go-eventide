@@ -1,0 +1,12 @@
+# JetBrains IDE files
+.idea/
+
+# macOS
+.DS_Store
+
+# Test/coverage artifacts
+coverage.out
+coverage.html
+
+# Local environment files (may contain credentials)
+.env

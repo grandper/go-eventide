@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package eventide.fixture;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/grandper/go-eventide/internal/fixture";
+
+// SomethingRecorded is a sample event encoded with Protocol Buffers.
+message SomethingRecorded {
+  // What was recorded.
+  string what = 1;
+
+  // When it was recorded. The field is not named occurred_on: the Go field it
+  // generates would collide with the OccurredOn method an event needs.
+  google.protobuf.Timestamp occurred_at = 2;
+}
